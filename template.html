@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gremlin Maker!</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header__nav">
+
+            <button id="comp-btn">Game Information</button>
+            <div id="comp-modal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="company-info">
+                        
+                        <span class="close">&times;</span>
+                        
+                        <div class="comp-title">
+                            <h1><span class="grem-font title-small">
+                                    Welcome to <br>
+                                    <span class="title-large">Gremlins Clicker!</span>
+                                </span></h1>
+                        </div>
+
+                        <p>The goal is to produce as many Gremlins as possible. <br><br>Be sure to buy upgrades,
+                            like eggs, water and snacks! <br>They will automatically make Gremlins for you.<br><br>
+                            Buying multipliers will increase the effectiveness<br>of all items, including player
+                            clicks.<br><br>
+                            All upgrades cost Gremlins to purchase, so get clicking!
+                        </p>
+                    </div>
+
+                    <div class="modal-content-two"></div>
+
+                </div>
+
+            </div>
+
+            <button id="cookie-clicker">Inspiration</button>
+
+            <button id="dev-btn">Developer Info</button>
+            <div id="dev-modal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="company-info">
+                        
+                        <span class="close">&times;</span>
+                        
+                        <div class="comp-title">
+                            <h1><span class="grem-font title-small">
+                                    Developed By <br>
+                                    <span class="title-large">Adam Bundschuh</span>
+                                </span></h1>
+                        </div>
+
+                        <p>Thanks for visiting and trying my app, I hope you enjoyed it!
+                            <br><br>I had fun working on this project and learned many new skills. <br>
+                            If you'd like to see more of my work please visit any of the following:
+                            <br><br>
+                            <div class="personal-links">
+                            <a href="https://adambundschuh.github.io/" target="_blank"><img src="/src/img/portfolio-icon.png"> Portfolio</a> •
+                            <a href="https://github.com/AdamBundschuh/" target="_blank"><img src="/src/img/github-logo.png"> GitHub</a> •
+                            <a href="https://linkedin.com/in/adam-bundschuh/" target="_blank"><img src="/src/img/linkedin-logo.png"> LinkedIn</a>
+                            </div>
+                
+                        </p>
+                    </div>
+
+                    <div class="modal-content-two"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="header">
+            <div class="header__left"><img id="logo" class="noselect" src="/src/img/gmaker-brick-logo.png"></div>
+
+
+
+
+            <div class="header__right">
+                
+            
+                <div id="header__right-gremlin">
+                    <!--2-->
+                    <img id="gizmo" class="noselect overlay" src="/src/img/gremlin-click.png">
+                    
+                    <img id="overlay-transparent" class="noselect" src="/src/img/gremlin-click.png">
+                </div>      
+                <div id="header__right-text">
+                    <h3 id="display-clicks">Gremlins: 0</h3>
+                    <h4 id="gremlins-per-second">Currently Producing 0 Gremlins Per Second</h4>
+                </div>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Item One: Autoclicker/Gremlin Eggs -->
+        <div class="purchases">
+            <div class="list-items item_one">
+                <div class="hor-divider">
+                    <img src="/src/img/hor-div.png">
+                </div>
+                <div class="inner__list-items">
+                    <div class="inner__list-items_left">
+                        <div class="auto-clicker item">
+                            <button id="auto-clicker-btn" class="item__button">
+                                <div class="inner__list-items_icon">
+                                    <img id="icon__item-one" src="/src/img/item-one-icon.png">
+                                </div>
+                                <div class="inner__list-items_text">
+                                    <div id="owned_name">
+                                        <h3>Gremlin Eggs</h3>
+                                        <span id="auto-clicker-price">Cost: 100 Gremlins</span>
+                                        <h5 id="auto-clicker-gps">Producing 23.7 GPS</h5>
+                                    </div>
+                                    <div class="display-num">
+                                        <h3 id="auto-clickers-owned-banner" class="banner-count">000</h3>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="inner__list-items_right item-one">
+                        <div id="background-wrap">
+                            <div class="egg x1"></div>
+                            <div class="egg x2"></div>
+                            <div class="egg x3"></div>
+                            <div class="egg x4"></div>
+                            <div class="egg x5"></div>
+                            <div class="egg x6"></div>
+                            <div class="egg x7"></div>
+                            <div class="egg x8"></div>
+                            <div class="egg x9"></div>
+                            <div class="egg x10"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Item Two: Multipliers -->
+            <div class="list-items item_two">
+                <div class="hor-divider">
+                    <img src="/src/img/hor-div.png">
+                </div>
+                <div class="inner__list-items">
+                    <div class="inner__list-items_left">
+                        <div class="auto-clicker item">
+                            <button id="multiplier-btn" class="item__button">
+                                <div class="inner__list-items_icon">
+                                    <img id="icon__item-two" src="/src/img/item-two-icon.png">
+                                </div>
+                                <div class="inner__list-items_text">
+                                    <div id="owned_name">
+                                        <h3>Multipliers</h3>
+                                        <span id="multiplier-price">Cost: 100 Gremlins</span>
+                                        <h5 id="current-multi-amount">Producing 23.7 GPS</h5>
+                                    </div>
+                                    <div class="display-num">
+                                        <h3 id="multipliers-owned" class="banner-count">000</h3>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="inner__list-items_right item-two">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item Three: Water Buckets -->
+            <div class="list-items item_three">
+                <div class="hor-divider">
+                    <img src="/src/img/hor-div.png">
+                </div>
+                <div class="inner__list-items">
+                    <div class="inner__list-items_left">
+                        <div class="auto-clicker item">
+                            <button id="item-three-btn" class="item__button">
+                                <div class="inner__list-items_icon">
+                                    <img id="icon__item-three" src="/src/img/item-three-icon.png">
+                                </div>
+                                <div class="inner__list-items_text">
+                                    <div id="owned_name">
+                                        <h3>Water Bottles</h3>
+                                        <span id="item-three-price">Cost: 100 Gremlins</span>
+                                        <h5 id="item-three-gps">Producing 23.7 GPS</h5>
+                                    </div>
+                                    <div class="display-num">
+                                        <h3 id="item-three-owned" class="banner-count">000</h3>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="inner__list-items_right item-three">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <br><br>
+
+
+        <div class="reset-game">
+            <button id="reset-btn">
+                Reset Game
+            </button>
+        </div>
+
+
+    </div>
+
+    <script src="./src/js/app.js" type="module"></script>
+    
+    
+    
+    <script src="./src/js/modals.js"></script>
+    <script src="./src/js/animations.js"></script>
+</body>
+
+</html>

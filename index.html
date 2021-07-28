@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gremlin Maker!</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <img id="gizmo" src="/src/img/gizmo.jpg">
+        </div>
+        <div class="stats">
+            <h3 id="display-clicks">Gremlins: 0</h3>
+            <h4 id="gremlins-per-second">Currently Producing 0 Gremlins Per Second</h4>
+        </div>
+
+        <div class="purchases">
+
+            <div class="auto-clicker item">
+                <div id="owned_name">
+                    <h3 id="auto-clickers-owned">Auto Clickers Owned: 0</h3>
+                    <h5 id="auto-clicker-gps">Producing 23.7 GPS</h5>
+                </div>
+                <button id="auto-clicker-btn" class="item__button">
+                    Buy 1 Egg<br>
+                    <span id="auto-clicker-price">
+                        Cost: 100 Gremlins
+                    </span>
+                </button>
+            </div>
+
+            <div class="multiplier item">
+                <div id="owned_name">
+                <h3 id="multipliers-owned">Multipliers Owned: 0</h3>
+                <h5 id="current-multi-amount">Currently x12.5</h5>
+            </div>
+                <button id="multiplier-btn" class="item__button">
+                    Buy 1 Multiplier<br>
+                    <span id="multiplier-price">
+                        Cost: 25 Gremlins
+                    </span>
+                </button>
+            </div>
+
+            <div class="item-2 item">
+                <div id="owned_name"> 
+                <h3 id="item-2__owned">Item Two's Owned: 0</h3>
+                <h5 id="item-2__gps">Current GPS: 12.5</h5>
+                </div>
+                <button id="item-2__btn" class="item__button">
+                    Buy Item 2<br>
+                    <span id="item-2__price">
+                        Cost: 75 Gremlins
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+
+        <br><br>
+
+
+        <div class="reset-game">
+            <button id="reset-btn">
+                Reset Game
+            </button>
+        </div>
+
+
+    </div>
+
+    <script src="./src/js/app.js" type="module"></script>
+</body>
+
+</html>
